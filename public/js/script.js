@@ -195,3 +195,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 clickable: true,
             },
         });
+
+
+          // ===== Modal Show/Hide Logic =====
+            window.addEventListener('load', function() {
+                const modal = document.getElementById('advertiseModal');
+                if (modal) {
+                    // Delay slightly for smoother experience
+                    setTimeout(() => {
+                        modal.classList.add('active');
+                    }, 500);
+                }
+            });
+
+            function closeAdvertiseModal() {
+                const modal = document.getElementById('advertiseModal');
+                modal.classList.remove('active');
+            }

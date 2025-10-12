@@ -22,6 +22,7 @@ return new class extends Migration
             $table->text('about')->nullable();
             $table->string('slogan')->nullable();
             $table->string('company_image')->nullable();
+            $table->string('advertise')->nullable();
             $table->string('logo')->nullable();
             $table->string('favicon')->nullable();
             $table->decimal('latitude', 10, 7)->nullable();

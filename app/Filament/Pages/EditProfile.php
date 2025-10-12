@@ -31,6 +31,7 @@ class EditProfile extends Page implements Forms\Contracts\HasForms
     public ?string $latitude = null;
     public ?string $longitude = null;
     public $company_image = null;
+    public $advertise = null;
     public $logo = null;
     public $favicon = null;
 
@@ -71,6 +72,14 @@ class EditProfile extends Page implements Forms\Contracts\HasForms
 
             Forms\Components\Section::make('Branding')
                 ->schema([
+                   Forms\Components\FileUpload::make('advertise')
+                        ->directory('company')
+                        ->image()
+                        ->maxSize(2048)
+                        ->storeFiles()
+                        ->preserveFilenames()
+                        ->getUploadedFileNameForStorageUsing(fn ($file) => $file->getClientOriginalName()),
+
                    Forms\Components\FileUpload::make('company_image')
                         ->directory('company')
                         ->image()
