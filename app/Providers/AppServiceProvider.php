@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('socialmedia', $socialmed);
         $profile = CompanyProfile::first();
         View::share('profile', $profile);
-        $footerCategories =  Category::limit(4)->get();
-        View::share('footerCategories', $footerCategories);
+       $footerCategories =  Category::limit(4)->get();
+       View::share('footerCategories', $footerCategories);
     }
 }

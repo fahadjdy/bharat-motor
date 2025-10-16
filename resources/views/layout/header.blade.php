@@ -25,8 +25,9 @@
             <div class="container">
                 <div class="nav-content">
                     <a href="{{ url('') }}" class="logo">
-                        <div class="logo-icon">BM</div>
-                        <span class="logo-text">MOTORS</span>
+                        <!-- <div class="logo-icon">BM</div>
+                        <span class="logo-text">MOTORS</span> -->
+                        <img src="{{ asset('storage/'.$profile->logo) }}" alt="{{ $profile->name }}">
                     </a>
 
                    <!-- Desktop Navigation -->
@@ -45,7 +46,11 @@
                     </nav>
 
                     <div class="nav-buttons">
-                        <button class="btn btn-outline"><i class="fa fa-download"></i> Brochure</button>
+                        <button class="btn btn-outline">
+                            <a href="{{ asset('brochure.pdf') }}" download="">
+                                <i class="fa fa-download"></i> Brochure
+                            </a>
+                        </button>
                         <button class="btn btn-primary">
                            <a href="tel:{{ $profile->contact }}">
                             <i class="fa fa-phone"></i>
@@ -75,8 +80,9 @@
 
                             <div class="mobile-buttons">
                                 <button class="btn btn-outline">
-                                    <a href="{{ asset('brochure.pdf') }}" download=""></a>
-                                    <i class="fa fa-download"></i> Brochure
+                                    <a href="{{ asset('brochure.pdf') }}" download="">
+                                        <i class="fa fa-download"></i> Brochure
+                                    </a>
                                 </button>
                                 <button class="btn btn-primary">
                                     <a href="tel:{{ $profile->contact }}"><i class="fa fa-phone"></i> Contact</a>
