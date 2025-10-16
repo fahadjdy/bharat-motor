@@ -26,7 +26,7 @@
         Leading manufacturer of high-quality body parts for Bolero, Tata Ace, and commercial vehicles across India.
       </p>
       <div class="hero-buttons">
-        <a href="{{ url('products') }}" class="btn btn-primary btn-large">
+        <a href="{{ url('products') }}" class="btn btn-primary btn-large bg-orange">
           Explore Our Products
           <i class="fas fa-arrow-right btn-icon"></i>
         </a>

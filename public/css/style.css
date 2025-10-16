@@ -23,12 +23,25 @@
     color: var(--orange-color);
 }
 
+.bg-btn-action{
+  background-color: var(--orange-color) !important;
+  color: white !important;
+}
+
+.bg-orange{
+  background-color: var(--orange-color) !important;
+}
+
+.bg-orange:hover{
+  background-color: var(--primary-color) !important;
+}
+
 a{
     text-decoration: none;
     color: inherit;
 }
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -212,12 +225,15 @@ body {
   font-weight: 500;
   transition: color 0.3s ease;
 }
+.nav-link.active{
+   color: var(--orange-color);
+}
 
 .nav-link:hover,
 .nav-link.active,
 .nav a:hover,
 .nav a.active {
-   border-bottom :1px solid var(--primary-color);
+   border-bottom :1px solid var(--orange-color);
 }
 
 .nav-buttons {
