@@ -1035,7 +1035,7 @@ body {
 }
 
 .footer .logo-icon {
-  background: var(--primary-color);
+  background: var(--orange-color);
   color: white;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
@@ -1064,7 +1064,7 @@ body {
   left: 0;
   width: 2rem;
   height: 2px;
- background: var(--primary-color);
+  background: var(--orange-color);
 }
 
 .footer-description {
