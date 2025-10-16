@@ -3,6 +3,7 @@
   --primary-color: #06038D;   /* blue */
   --primary-color-dark: #06038D; /* darker shade for hover */
   --secondary-color: #64748b; /* slate gray */
+  --orange-color: #FF9933; /* safferon */
   --text-color: #475569; 
   --background-color: #ffffff;
   --light-gray: #f8fafc;
@@ -17,6 +18,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.text-orange{
+    color: var(--orange-color);
+}
+
 a{
     text-decoration: none;
     color: inherit;
@@ -352,6 +358,8 @@ body {
   font-size: 1rem;
 }
 
+
+
 /* Hero Section */
 .hero {
   position: relative;
@@ -362,34 +370,7 @@ body {
   overflow: hidden;
 }
 
-.about-hero {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
-  color: white;
-  padding: 6rem 0;
-  text-align: center;
-}
-
-.about-hero-content h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  line-height: 1.1;
-}
-
-@media (min-width: 768px) {
-  .about-hero-content h1 {
-    font-size: 3.75rem;
-  }
-}
-
-.about-hero-content p {
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 48rem;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
+/* Hero background */
 .hero-bg {
   position: absolute;
   top: 0;
@@ -401,8 +382,10 @@ body {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+  z-index: 0;
 }
 
+/* Dark overlay */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -413,9 +396,20 @@ body {
   z-index: 1;
 }
 
-.hero-content {
+/* Hero wrapper (flex container) */
+.hero-wrapper {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Content */
+.hero-content {
+  flex: 1 1 50%;
   max-width: 42rem;
 }
 
@@ -432,10 +426,6 @@ body {
   }
 }
 
-.accent-text {
-  color: var(--primary-color);
-}
-
 .hero-description {
   font-size: 1.25rem;
   margin-bottom: 2rem;
@@ -443,15 +433,51 @@ body {
   line-height: 1.6;
 }
 
+/* Buttons */
 .hero-buttons {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
+.hero-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
 @media (min-width: 640px) {
   .hero-buttons {
     flex-direction: row;
+  }
+}
+
+/* Right-side image */
+.hero-image {
+  flex: 1 1 40%;
+  display: block;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+/* Responsive: hide image on small screens */
+@media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .hero-content {
+    text-align: center;
   }
 }
 

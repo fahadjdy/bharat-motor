@@ -11,36 +11,40 @@
 
 
  <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-overlay"></div>
-            <div class="hero-bg"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                       Precision.
-                        <span class="accent-text"> Performance.</span>
-                        Perfection.
-                    </h1>
-                    <p class="hero-description">
-                        Leading manufacturer of high-quality body parts for Bolero, Tata Ace, and commercial vehicles across India.
-                    </p>
-                    <div class="hero-buttons">
-                        <button class="btn btn-primary btn-large">
-                        <a href="{{ url('products') }}">    Explore Our Products
-                            <i class="fas fa-arrow-right btn-icon"></i>
-                            </a>
-                        </button>
-                        <button class="btn btn-outline-white btn-large">
-                            <a href="tel:{{ $profile->contact }}">
-                            <i class="fas fa-phone btn-icon"></i>
-                            Call Now
-                            </a>
-                        </button>
+            <section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-bg"></div>
 
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div class="container hero-wrapper">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Precision.
+        <span class="text-orange"> Performance.</span>
+        Perfection.
+      </h1>
+      <p class="hero-description">
+        Leading manufacturer of high-quality body parts for Bolero, Tata Ace, and commercial vehicles across India.
+      </p>
+      <div class="hero-buttons">
+        <a href="{{ url('products') }}" class="btn btn-primary btn-large">
+          Explore Our Products
+          <i class="fas fa-arrow-right btn-icon"></i>
+        </a>
+        <a href="tel:{{ $profile->contact }}" class="btn btn-outline-white btn-large">
+          <i class="fas fa-phone btn-icon"></i>
+          Call Now
+        </a>
+      </div>
+    </div>
+
+    <!-- ✅ Right-Side Image -->
+    <div class="hero-image">
+      <img src="{{ asset('img/hero-image.png') }}" alt="Hero Visual" width="100%" loading="lazy">
+    </div>
+  </div>
+</section>
+
+
         
         <x-about/>
 
