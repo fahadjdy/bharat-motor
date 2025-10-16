@@ -4,6 +4,7 @@
   --primary-color-dark: #06038D; /* darker shade for hover */
   --secondary-color: #64748b; /* slate gray */
   --orange-color: #FF9933; /* safferon */
+  --light-orange-color: rgb(255, 243, 220); /* safferon */
   --text-color: #475569; 
   --background-color: #ffffff;
   --light-gray: #f8fafc;
@@ -573,7 +574,7 @@ body {
 .usp-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  background-color: #d9e8f5;
+  background-color: var(--light-orange-color);
   color: var(--primary-color);
   border-radius: 50%;
   width: 4rem;
@@ -732,7 +733,7 @@ body {
 
   font-size: 2rem;
   margin-bottom: 1rem;
-  background-color: #d9e8f5;
+  background-color: var(--light-orange-color);
   color: var(--primary-color);
   border-radius: 50%;
   width: 4rem;
@@ -1487,13 +1488,14 @@ body {
 .contact-section-info-form button {
   width: 100%;
   padding: 14px;
-  background: var(--primary-color);
+  background: var(--orange-color);
   border: none;
   border-radius: 6px;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
+  margin-top: 10px;
 }
 
 .contact-section-info-form button:hover {
@@ -1516,7 +1518,7 @@ body {
 .contact-section-info-icon {
   width: 48px;
   height: 48px;
-  background: #c3ddfe;
+  background: var(--light-orange-color);
   border-radius: 8px;
   display: flex;
   align-items: center;
