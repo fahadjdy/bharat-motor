@@ -19,7 +19,7 @@ class CompanyProfile extends Model
         'about',
         'slogan',
         'company_image',
-        'advertise',
+        'advertisement',
         'logo',
         'favicon',
         'latitude',

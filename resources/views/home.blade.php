@@ -193,12 +193,12 @@
         </section>
 
 
-        @if(!empty($profile->advertise))
+        @if(!empty($profile->advertisement))
             <!-- Advertisement Modal -->
             <div id="advertiseModal" class="modal-overlay">
                 <div class="modal-content">
                     <button class="modal-close" onclick="closeAdvertiseModal()">&times;</button>
-                    <img src="{{ asset('storage/'.$profile->advertise) }}" alt="Advertisement" loading="lazy">
+                    <img src="{{ asset('storage/'.$profile->advertisement) }}" alt="Advertisement" loading="lazy">
                 </div>
             </div>
         @endif
