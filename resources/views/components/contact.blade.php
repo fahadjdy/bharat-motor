@@ -49,6 +49,8 @@
                             <div>
                                 <h4>Phone</h4>
                                 <p>+91 {{ $profile->contact}}</p>
+                                <p>+91 9312674125</p>
+                                
                             </div>
                         </div>
                         <div class="contact-section-info-item">
